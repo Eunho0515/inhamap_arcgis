@@ -54,6 +54,7 @@ public sealed class DisplayArcGISMap : MonoBehaviour
         }
 
         ConfigureMapComponents(mapComponent, coordinates);
+        InhaAnniversaryHall.CreateOrUpdate(mapComponent.transform);
         ConfigureCamera(mapComponent.transform, coordinates);
     }
 
