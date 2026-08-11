@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b6510abc473ea42fcaf05f2d4d8e8b3d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudStretchRenderer.cs
+  uploadId: 968484

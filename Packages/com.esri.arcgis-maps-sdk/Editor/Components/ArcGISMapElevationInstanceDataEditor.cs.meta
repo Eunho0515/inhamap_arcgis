@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: db87d42996749fe478c8fdd4bc852a6c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/Components/ArcGISMapElevationInstanceDataEditor.cs
+  uploadId: 968484

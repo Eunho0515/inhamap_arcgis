@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 51d1acf29105f194bb717ed3f4f316ec
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/Components/ArcGISCameraComponentEditor.cs
+  uploadId: 968484

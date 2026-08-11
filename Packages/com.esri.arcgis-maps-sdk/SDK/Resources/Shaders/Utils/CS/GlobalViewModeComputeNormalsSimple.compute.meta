@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be1ce5404f7a05f4cac4f4188b790d9f
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 2097156
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Utils/CS/GlobalViewModeComputeNormalsSimple.compute
+  uploadId: 968484

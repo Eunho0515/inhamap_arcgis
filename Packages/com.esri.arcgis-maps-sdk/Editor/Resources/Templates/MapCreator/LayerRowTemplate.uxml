@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/LayerRowStyle.uss" />
+	<Foldout name="layer-foldout">
+		<editor:PropertyField name="opacity-field" binding-path="Opacity" />
+		<editor:PropertyField name="type-field" binding-path="Type" />
+		<editor:PropertyField name="source-field" binding-path="Source" />
+		<editor:PropertyField name="authentication-field" binding-path="AuthenticationType" />
+		<editor:PropertyField name="occlude-surface-field" binding-path="OccludeSurface" />
+		<editor:PropertyField name="mesh-modifications-field" binding-path="MeshModifications" />
+		<editor:PropertyField name="spatial-feature-filter-field" binding-path="SpatialFeatureFilter" />
+		<editor:PropertyField name="building-filter-field" binding-path="BuildingSceneLayerFilter" />
+	</Foldout>
+</UXML>

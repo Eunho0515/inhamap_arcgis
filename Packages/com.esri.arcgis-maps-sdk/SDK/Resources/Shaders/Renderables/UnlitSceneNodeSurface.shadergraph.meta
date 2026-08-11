@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6343406fa6de9c249a29c9ba9aaae9a1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Renderables/UnlitSceneNodeSurface.shadergraph
+  uploadId: 968484

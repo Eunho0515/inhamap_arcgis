@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ed877ca810e0a46d28a2c978e05f7a66
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISLatitudeLongitudeFormat.cs
+  uploadId: 968484

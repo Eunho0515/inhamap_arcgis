@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e4673c395e0eb4434b33e9b612165c8b
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Map/Symbology/ArcGISSymbolSizeUnits.cs
+  uploadId: 968484

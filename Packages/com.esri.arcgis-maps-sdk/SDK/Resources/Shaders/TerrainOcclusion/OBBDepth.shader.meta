@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0688a4a7312c12f47b2036e56a47acb0
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/TerrainOcclusion/OBBDepth.shader
+  uploadId: 968484

@@ -1,0 +1,155 @@
+.main-foldout > .unity-foldout__toggle .unity-toggle__input {
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	-unity-font-style: bold;
+	margin-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-top: 2px;
+}
+
+.main-foldout > .unity-base-field {
+	margin-right: 0px;
+	margin-top: 1px;
+}
+
+.dark .main-foldout > .unity-foldout__toggle .unity-toggle__input {
+	background-color: #3e3e3e;
+	border-bottom-color: #303030;
+	border-top-color: #1a1a1a;
+}
+
+.light .main-foldout > .unity-foldout__toggle .unity-toggle__input {
+	background-color: #cbcbcb;
+	border-bottom-color: #bababa;
+	border-top-color: #7f7f7f;
+}
+
+.main-foldout > #unity-content {
+	background-color: var(--unity-colors-window-background);
+	margin-bottom: 1px;
+	margin-left: 19px;
+	margin-right: 4px;
+	margin-top: 0px;
+}
+
+Foldout Foldout .unity-toggle {
+	margin-left: -12px;
+	margin-right: -2px;
+}
+
+Foldout Foldout .unity-foldout__content {
+	margin-left: 10px;
+}
+
+Foldout Foldout .unity-label {
+	min-width: 185px;
+}
+
+.tool-holder {
+	margin-bottom: 1px;
+}
+
+.create-button-holder {
+	align-items: flex-start;
+	border-top-color: black;
+	border-top-width: 1px;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 4px;
+	padding-top: 1px;
+}
+
+.button-create {
+	flex: 1;
+	height: 30px;
+	margin: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	max-width: 230px;
+}
+
+.button-refresh {
+	flex: 1;
+	height: 24px;
+	margin-bottom: 20px;
+	margin-top: 8px;
+	max-width: 24px;
+	padding: 3px;
+}
+
+.button-refresh Image {
+	background-image: resource('Images/MapCreator/Dark/RefreshIcon');
+	height: 16px;
+	width: 16px;
+}
+
+.light .button-refresh Image {
+	background-image: resource('Images/MapCreator/Light/RefreshIcon');
+}
+
+.hyperlink-text {
+	cursor: link;
+	font-size: 12px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+.dark .hyperlink-text {
+	color: #4972db;
+}
+
+.light .hyperlink-text {
+	color: #3a72b0;
+}
+
+.dark .hyperlink-text:hover {
+	color: #6e93f1;
+}
+
+.light .hyperlink-text:hover {
+	color: #0051ad;
+}
+
+.white-text-small {
+	margin-bottom: 5px;
+	-unity-text-overflow-position: start;
+	white-space: normal;
+}
+
+.white-text-small#sdk-title {
+	-unity-font-style: bold;
+}
+
+.button-file-selector {
+	width: 28px;
+}
+
+.kebab-button {
+	background-color: transparent;
+	border-width: 0;
+	font-size: 16px;
+	margin-left: 8px;
+	margin-right: 0px;
+	rotate: 90deg;
+}
+
+.toolbar-box {
+	align-items: stretch;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	margin: 10px 2px 5px 2px;
+	overflow: hidden;
+	padding: 0 2px 0 2px;
+}
+
+.dark .toolbar-box {
+	background-color: #1a1a1a;
+}
+
+.light .toolbar-box {
+	background-color: #b2b2b2;
+}

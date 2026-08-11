@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: eb3a5b5b2ef804547a94584cf7df9dbe
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/RCQ/ArcGISSetTexturePixelDataCommandParameters.cs
+  uploadId: 968484

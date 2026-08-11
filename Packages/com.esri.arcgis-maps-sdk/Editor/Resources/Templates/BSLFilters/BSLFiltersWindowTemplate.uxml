@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+	xmlns:ui="UnityEngine.UIElements"
+	xmlns:uie="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	editor-extension-mode="False"
+>
+	<Style src="../../Styles/BSLFilters/BSLFiltersWindowStyle.uss" />
+	<ui:VisualElement name="toolbar">
+		<ui:IMGUIContainer />
+	</ui:VisualElement>
+	<ui:VisualElement name="body">
+		<ui:Foldout name="selected-filter-foldout" text="Selected Filter">
+			<esri:ArcGISBuildingAttributeFilterDropdownField name="filters-dropdown" />
+		</ui:Foldout>
+		<ui:VisualElement name="new-filter-tab">
+			<ui:Foldout name="filters-foldout" text="Filters">
+				<ui:ListView name="filters-listview" fixed-item-height="20" />
+				<ui:VisualElement name="add-filter-button">
+					<ui:Image />
+					<ui:TextElement text="Add Filter" />
+				</ui:VisualElement>
+			</ui:Foldout>
+		</ui:VisualElement>
+		<ui:VisualElement name="filter-attributes-tab">
+			<ui:Foldout name="filter-attributes-foldout" text="Filter Attributes">
+				<ui:VisualElement name="select-filter-attributes-values" style="align-items: stretch; justify-content: flex-start; align-self: auto;">
+					<ui:VisualElement name="select-filter-attributes-values-element" style="align-items: stretch; align-self: auto;">
+						<ui:Toggle label=" Select Attributes for Filter Definition" name="select-all-attributes-toggle" style="align-self: flex-start; flex-direction: row-reverse;" />
+						<ui:ListView name="filter-attributes-listview" fixed-item-height="20" selection-type="None" style="margin-left: 20px;" />
+					</ui:VisualElement>
+				</ui:VisualElement>
+			</ui:Foldout>
+		</ui:VisualElement>
+		<ui:VisualElement name="filter-definition-tab">
+			<ui:Foldout name="filter-definition-foldout" text="Filter Definition">
+				<ui:VisualElement name="selected-filter-attributes-element" style="align-self: auto;">
+					<ui:Label name="selected-filter-attributes-label" text="Selected Filter Attributes" display-tooltip-when-elided="true" />
+					<ui:ListView name="selected-filter-attributes-listview" focusable="true" fixed-item-height="18" />
+				</ui:VisualElement>
+				<ui:VisualElement name="select-filter-definition-values" style="align-items: stretch; justify-content: flex-start; align-self: auto;">
+					<ui:TextField name="select-filter-definition-values-search-textfield" picking-mode="Ignore" readonly="false" />
+					<ui:VisualElement name="select-filter-definition-values-element" style="align-items: stretch; align-self: auto;">
+						<ui:Toggle label="Select Filter Definition Values" name="select-all-values-toggle" style="align-self: flex-start;" />
+						<ui:ListView name="select-filter-definition-values-listview" focusable="true" selection-type="None" fixed-item-height="18" />
+					</ui:VisualElement>
+					<ui:Button text="Generate WHERE clause" display-tooltip-when-elided="true" name="generate-clause-button" tooltip="Generate WHERE Clause based on selections. This will overwrite manually inputed WHERE clause." />
+				</ui:VisualElement>
+			</ui:Foldout>
+		</ui:VisualElement>
+		<ui:VisualElement name="where-clause-tab">
+			<ui:Foldout name="where-clause-foldout" text="WHERE Clause">
+				<ui:TextField name="where-clause-textfield" multiline="true" />
+				<ui:VisualElement name="warning-box">
+					<ui:Image name="warning-icon" />
+					<ui:Label text="Verify that the appropriate layers in the &quot;Disciplines and Categories&quot; window are visible when applying a WHERE clause." display-tooltip-when-elided="true" />
+				</ui:VisualElement>
+			</ui:Foldout>
+		</ui:VisualElement>
+	</ui:VisualElement>
+	<ui:VisualElement name="footer">
+		<ui:Button name="clear-button" text="Clear" />
+		<ui:Button name="apply-button" text="Apply" />
+	</ui:VisualElement>
+</ui:UXML>

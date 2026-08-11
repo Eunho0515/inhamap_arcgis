@@ -1,0 +1,53 @@
+:root {
+	flex-grow: 1;
+}
+
+.basemap-tool {
+	flex-grow: 1;
+	padding: 0;
+}
+
+.basemap-tool ArcGISMapCreatorBasemapWidget {
+	flex-grow: 1;
+}
+
+.basemap-tool ArcGISMapCreatorBasemapWidget .content-wrapper {
+	padding-left: 24px;
+}
+
+.basemap-tool .footer {
+	align-items: flex-end;
+	flex-shrink: 0;
+	height: 56px;
+	justify-content: center;
+	padding-right: 32px;
+}
+
+.basemap-tool .footer .add-new {
+	align-items: center;
+	flex-direction: row;
+	opacity: 0.7;
+}
+
+.basemap-tool .footer .add-new:hover {
+	opacity: 1;
+}
+
+.basemap-tool .footer .add-new .plus {
+	height: 10px;
+	margin-right: 8px;
+	opacity: 0.7;
+	width: 10px;
+}
+
+.dark .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Dark/PlusIcon');
+}
+
+.light .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Light/PlusIcon');
+}
+
+.basemap-tool .footer .add-new TextElement {
+	height: 15px;
+}

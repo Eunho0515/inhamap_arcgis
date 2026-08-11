@@ -1,0 +1,50 @@
+.arcgis-building-scene-layer-filter-toggle-field > .unity-base-field__input {
+	align-items: center;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: flex-start;
+}
+
+.arcgis-building-scene-layer-filter-toggle-field__toggle {
+	margin-left: 0;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.arcgis-building-scene-layer-filter-toggle-field__button {
+	align-items: center;
+	background-color: transparent;
+	border-radius: 0;
+	border-width: 0;
+	height: 18px;
+	justify-content: center;
+	margin-left: 0;
+	margin-right: 0;
+	max-height: 18px;
+	max-width: 18px;
+	min-height: 18px;
+	min-width: 18px;
+	padding: 0;
+	width: 18px;
+}
+
+.arcgis-building-scene-layer-filter-toggle-field__button-image {
+	align-self: center;
+	height: 16px;
+	margin-bottom: 0;
+	margin-top: 0;
+	width: 16px;
+}
+
+.arcgis-building-scene-layer-filter-field {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.dark .arcgis-building-scene-layer-filter-toggle-field__button:enabled:hover {
+	background-color: #505050;
+}
+
+.light .arcgis-building-scene-layer-filter-toggle-field__button:enabled:hover {
+	background-color: #cbcbcb;
+}

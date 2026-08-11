@@ -1,0 +1,39 @@
+{
+  "name": "com.esri.arcgis-maps-sdk",
+  "version": "2.4.0",
+  "displayName": "ArcGIS Maps SDK for Unity",
+  "description": "ArcGIS Maps SDK for Unity is a plugin developed by Esri that enables access to real world maps and 3D content from the ArcGIS Platform. This plugin provides samples and an API to create interactive, photorealistic 3D and XR experiences with geospatial data.",
+  "unity": "6000.0",
+  "unityRelease": "58f2",
+  "dependencies": {
+    "com.unity.burst": "1.8.28",
+    "com.unity.mathematics": "1.2.6"
+  },
+  "changelogUrl": "https://developers.arcgis.com/unity/release-notes/",
+  "documentationUrl": "https://developers.arcgis.com/unity",
+  "licensesUrl": "https://www.esri.com/en-us/legal/terms/master-agreement-product",
+  "keywords": [
+    "esri",
+    "arcgis",
+    "gis",
+    "maps",
+    "sdk"
+  ],
+  "samples": [
+    {
+      "displayName": "Sample Content",
+      "description": "Demonstrates how to use the package.",
+      "path": "Samples~"
+    }
+  ],
+  "author": {
+    "name": "Esri",
+    "url": "https://www.esri.com/"
+  },
+  "repository": {
+    "url": "https://devtopia.esri.com/runtime/unity.git",
+    "type": "git",
+    "revision": "657f9b091fdd68f5f522a31ead3c416c7f9dbee5"
+  },
+  "_fingerprint": "7bb05a17638a4d2f448eb76476fe6c92"
+}

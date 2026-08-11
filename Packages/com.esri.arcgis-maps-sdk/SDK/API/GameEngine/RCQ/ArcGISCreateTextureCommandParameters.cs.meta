@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 795176a413b8e4d1f8c9442a329e44cd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/RCQ/ArcGISCreateTextureCommandParameters.cs
+  uploadId: 968484

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 594ac59c3357544c0ac52ed22bf779a6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudSizeAlgorithmType.cs
+  uploadId: 968484

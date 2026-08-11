@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 265b6a392115d8a4aa7154d8c9356e26
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 72fc605a1c812864ebc7218051ab7464, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/HPF/Runtime/Behaviors/HPRoot.cs
+  uploadId: 968484

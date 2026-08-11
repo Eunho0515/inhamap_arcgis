@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+	xmlns:ui="UnityEngine.UIElements"
+	xmlns:uie="UnityEditor.UIElements"
+	editor-extension-mode="False"
+>
+	<Style src="../../Styles/BSLFilters/BSLFiltersWindowFilterItemStyle.uss" />
+	<ui:VisualElement name="label-element">
+		<ui:Toggle />
+		<ui:Label />
+		<ui:TextField />
+	</ui:VisualElement>
+	<ui:VisualElement name="spacer" />
+	<ui:VisualElement name="buttons-element">
+		<ui:Button name="edit">
+			<ui:Image />
+		</ui:Button>
+		<ui:Button name="duplicate">
+			<ui:Image />
+		</ui:Button>
+		<ui:Button name="delete">
+			<ui:Image />
+		</ui:Button>
+	</ui:VisualElement>
+</ui:UXML>

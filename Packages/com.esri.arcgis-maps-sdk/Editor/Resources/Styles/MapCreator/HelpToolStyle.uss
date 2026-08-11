@@ -1,0 +1,15 @@
+.esri-logo {
+	-unity-background-scale-mode: scale-to-fit;
+	flex: 1;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	min-height: 96px;
+}
+
+.dark .esri-logo {
+	background-image: resource('Images/MapCreator/HelpTool/Dark/EsriLogo');
+}
+
+.light .esri-logo {
+	background-image: resource('Images/MapCreator/HelpTool/Light/Esrilogo');
+}

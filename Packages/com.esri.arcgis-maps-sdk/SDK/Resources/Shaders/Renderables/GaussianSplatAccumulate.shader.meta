@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e5d8f3dae62aab4f9e9a3338a9fd9c2
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Renderables/GaussianSplatAccumulate.shader
+  uploadId: 968484

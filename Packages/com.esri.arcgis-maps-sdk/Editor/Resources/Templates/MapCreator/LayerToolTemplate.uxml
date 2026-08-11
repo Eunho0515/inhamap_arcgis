@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/LayerToolStyle.uss" />
+	<ScrollView class="unity-inspector-element" />
+	<VisualElement class="footer">
+		<Toggle name="enable-all" text="Enable All"/>
+		<VisualElement class="spacer"/>
+		<VisualElement class="add-new">
+			<Image class="plus" />
+			<TextElement name="add-new-label" text="Add New" />
+		</VisualElement>
+	</VisualElement>
+</UXML>

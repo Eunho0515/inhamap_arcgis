@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b8bedfc009a400469db1e9da2cffaa4
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Billboard.hlsl
+  uploadId: 968484

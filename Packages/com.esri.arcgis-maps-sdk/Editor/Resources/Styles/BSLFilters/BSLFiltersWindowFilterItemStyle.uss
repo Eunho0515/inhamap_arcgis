@@ -1,0 +1,42 @@
+:root {
+	align-items: center;
+	flex-direction: row;
+}
+
+Toggle {
+	margin: 1px 3px;
+}
+
+Label {
+	flex-grow: 1;
+}
+
+TextField {
+	flex-grow: 1;
+}
+
+Button {
+	background-color: transparent;
+	border-radius: 0;
+	border-width: 0;
+	margin: 0px 3px;
+	padding: 0;
+}
+
+Button:active {
+	border-width: 0;
+}
+
+#label-element {
+	flex-direction: row;
+}
+
+#spacer {
+	flex-grow: 1;
+}
+
+#buttons-element {
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100px;
+}

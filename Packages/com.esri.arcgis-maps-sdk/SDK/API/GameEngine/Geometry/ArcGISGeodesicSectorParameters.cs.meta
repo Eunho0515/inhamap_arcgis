@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d3d35a36ab7914476a742c1e3a181734
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISGeodesicSectorParameters.cs
+  uploadId: 968484

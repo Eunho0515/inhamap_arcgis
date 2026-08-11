@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6ed5b222ae0054e9cbb490631255289e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Extras/PEData/egm96.grd
+  uploadId: 968484

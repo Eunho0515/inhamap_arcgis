@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 731d76559f0614c42a1b955a742a2180
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/HPF/LICENSE.txt
+  uploadId: 968484

@@ -1,0 +1,66 @@
+#pragma kernel CSMain
+
+#define NUM_TEXTURES_PER_PASS 8
+
+RWTexture2D<float4> Output;
+
+int NumTextures;
+bool OutputShouldBeSampled;
+
+Texture2D<float4> Input[NUM_TEXTURES_PER_PASS];
+#ifndef SHADER_API_GLES3
+SamplerState samplerInput[NUM_TEXTURES_PER_PASS];
+#endif
+
+float4 Opacities[(NUM_TEXTURES_PER_PASS / 4) + (NUM_TEXTURES_PER_PASS < 4)];
+float4 OffsetsAndScales[NUM_TEXTURES_PER_PASS];
+
+// Same as in UnityCG.cginc to match the PS behavior
+inline half3 GammaToLinearSpace (half3 sRGB)
+{
+    return sRGB * (sRGB * (sRGB * 0.305306011h + 0.682171111h) + 0.012522878h);
+}
+
+// Same as in UnityCG.cginc to match the PS behavior
+inline half3 LinearToGammaSpace (half3 linRGB)
+{
+    linRGB = max(linRGB, half3(0.h, 0.h, 0.h));
+
+    return max(1.055h * pow(linRGB, 0.416666667h) - 0.055h, 0.h);
+}
+
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+	uint width, height;
+	Output.GetDimensions(width, height);
+
+	if (id.x < width && id.y < height)
+	{
+		float4 output = 1.0f;
+		float2 uv = float2((id.x + 0.5f) / width, (id.y + 0.5f) / height);
+
+		if (OutputShouldBeSampled)
+		{
+			output = Output[id.xy];
+			output = float4(LinearToGammaSpace(output.xyz), output.w);
+		}
+
+		[unroll]
+		for (int i = 0; i < NumTextures; i++)
+		{
+#ifndef SHADER_API_GLES3
+			float4 texSample = Input[i].SampleLevel(samplerInput[i], uv * OffsetsAndScales[i].z + OffsetsAndScales[i].xy, 0);
+#else
+			int2 sampleCoord = int2((uv * OffsetsAndScales[i].z + OffsetsAndScales[i].xy) * float2(width, height));
+			float4 texSample = Input[i][sampleCoord];
+#endif
+
+			texSample = float4(LinearToGammaSpace(texSample.xyz), texSample.w);
+			texSample *= Opacities[i / 4][i % 4];
+			output = output * (1 - texSample.w) + texSample;
+		}
+
+		Output[id.xy] = float4(GammaToLinearSpace(output.xyz), output.w);
+	}
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef154c8c79c7044f89336e57f75afd9f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Legal/open-source-acknowledgements.pdf
+  uploadId: 968484

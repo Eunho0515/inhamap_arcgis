@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/AuthRowStyle.uss" />
+	<Foldout name="auth-config-foldout">
+		<VisualElement>
+			<editor:PropertyField binding-path="portalURL"/>
+			<Image name="warning-icon" tooltip="Duplicate Portal configuration detected. Only the first will be used for authentication." />
+		</VisualElement>
+		<editor:PropertyField binding-path="clientId" label="Client ID"/>
+		<editor:PropertyField binding-path="redirectURL" />
+	</Foldout>
+</UXML>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/HelpToolStyle.uss" />
+	<ScrollView>
+		<VisualElement class="tool-holder">
+			<VisualElement class="esri-logo"/>
+			<Foldout class="main-foldout" text="Documentation">
+				<Label class="hyperlink-text" name="link-homepage" text="Homepage"/>
+				<Label class="hyperlink-text" name="link-api" text="API Reference"/>
+				<Label class="hyperlink-text" name="link-samples" text="Samples"/>
+			</Foldout>
+			<Foldout class="main-foldout" text="Support">
+				<Label class="hyperlink-text" name="link-forums" text="Forums"/> 
+				<Label class="hyperlink-text" name="link-support" text="SDK Support Resources"/>
+				<Label class="hyperlink-text" name="link-get-api-key" text="Get API Keys"/>
+				<Label class="hyperlink-text" name="link-release-notes" text="Release Notes"/>
+			</Foldout>
+			<Foldout class="main-foldout" text="About">
+				<Label class="white-text-small" name="sdk-title"/>
+				<Label class="white-text-small" name="copyright-text"/>
+			</Foldout>
+		</VisualElement>
+	</ScrollView>
+</UXML>

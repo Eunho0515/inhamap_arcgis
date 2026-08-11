@@ -1,0 +1,84 @@
+:root {
+	flex-grow: 1;
+	padding: 0;
+}
+
+.tool-holder > #unity-content {
+	background-color: var(--unity-colors-window-background);
+	margin-bottom: 0px;
+	margin-right: 2px;
+	margin-top: 2px;
+}
+
+ScrollView {
+	flex-grow: 1;
+}
+
+#api-info-button {
+	border-width: 0;
+	height: 12px;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 12px;
+}
+
+#api-key-text {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.dark #api-info-button {
+	background-image: resource('Images/MapCreator/Dark/QuestionIcon');
+}
+
+.light #api-info-button {
+	background-image: resource('Images/MapCreator/Light/QuestionIcon');
+}
+
+.footer {
+	align-content: center;
+	flex-direction: row;
+	flex-shrink: 0;
+	height: 56px;
+	justify-content: flex-end;
+	padding-left: 20px;
+	padding-right: 32px;
+}
+
+.footer Toggle Label {
+	margin-left: 10px;
+}
+
+.footer .spacer {
+	flex-grow: 1;
+}
+
+.footer .add-new {
+	align-items: center;
+	flex-direction: row;
+	opacity: 0.7;
+}
+
+.footer .add-new:hover {
+	opacity: 1;
+}
+
+.footer .add-new .plus {
+	height: 10px;
+	margin-right: 8px;
+	opacity: 0.7;
+	width: 10px;
+}
+
+.dark .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Dark/PlusIcon');
+}
+
+.light .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Light/PlusIcon');
+}
+
+.footer .add-new TextElement {
+	height: 15px;
+}

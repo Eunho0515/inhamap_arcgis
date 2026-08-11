@@ -1,0 +1,23 @@
+.arcgis-shape-dimensions-field > .unity-base-field__input {
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.arcgis-shape-dimensions-field DoubleField {
+	flex-basis: 1px;
+	flex-grow: 1;
+	margin: 0;
+}
+
+.arcgis-shape-dimensions-field DoubleField#x {
+	margin-right: 3px;
+}
+
+.arcgis-shape-dimensions-field DoubleField#y {
+	margin-left: 3px;
+}
+
+.arcgis-shape-dimensions-field DoubleField > .unity-base-field__label {
+	margin-right: 2px;
+	min-width: auto;
+}

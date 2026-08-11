@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4a2df5add558d1c498d610035c53f375
+timeCreated: 1484217493
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Readme_ArcGISMapsSDK.asset
+  uploadId: 968484

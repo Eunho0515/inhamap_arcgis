@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../../Styles/MapCreator/PolygonTool/ArcGISSpatialFeatureFilterToolStyle.uss" />
+	<VisualElement class="spatial-feature-filter-tool">
+		<Button name="disjoint" class="first" text="Disjoint" />
+		<Button name="contains" class="last" text="Contains" />
+	</VisualElement>
+</UXML>

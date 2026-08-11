@@ -1,0 +1,9 @@
+By accessing or using software accompanying this notice, you acknowledge and agree that Unity Technologies' software known
+as the "High Precision Framework" is licensed under the terms of the Unity-dependent projects 
+(available at https://unity3d.com/legal/licenses/unity_companion_license or its successor URL) with the following further condition:
+
+Distribution of the High Precision Framework is permitted only as an integrated part of the Environmental Systems Research Institute,
+ Inc.'s "ArcGIS Maps SDK for Unity" software or its future namesake should it change; no other distribution in any form is permitted.
+
+Unless expressly provided otherwise, the High Precision Framework under this license is made available strictly on
+an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.

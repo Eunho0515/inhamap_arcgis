@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 10c1b217b5fbf7c4185b00c744843a7a
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/ReadInstanceData.hlsl
+  uploadId: 968484

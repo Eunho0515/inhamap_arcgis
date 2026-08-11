@@ -1,0 +1,42 @@
+ListView .unity-list-view__item {
+	border-radius: 3px;
+	height: 18px;
+	margin-left: 22px;
+}
+
+#footer {
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 10px 13px;
+	min-height: 20px;
+}
+
+#footer Button {
+	margin: 0px 2px;
+	width: 80px;
+}
+
+#architectural-toggle,
+#structural-toggle,
+#mechanical-toggle,
+#electrical-toggle,
+#piping-toggle {
+	margin-left: 20px;
+	margin-top: 3px;
+	position: absolute;
+}
+
+#architectural-label,
+#structural-label,
+#mechanical-label,
+#electrical-label,
+#piping-label {
+	justify-content: flex-start;
+	margin-left: 38px;
+	margin-top: 3px;
+	position: absolute;
+}
+
+#main-scrollview {
+	height: 9999px;
+}

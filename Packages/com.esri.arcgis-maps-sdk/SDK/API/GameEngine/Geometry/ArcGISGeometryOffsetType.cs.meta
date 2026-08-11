@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a3c66193184334526bec4b22b9cfe2fd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISGeometryOffsetType.cs
+  uploadId: 968484

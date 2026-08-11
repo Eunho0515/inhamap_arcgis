@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7d60f837039004479ba0e79bb2ae2bbe
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/Standard/ArcGISRGBColor.cs
+  uploadId: 968484

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d3defb1c60b86461baf291f4a2660fd9
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/Unity/ArcGISMutableArrayElementAddedEvent.cs
+  uploadId: 968484

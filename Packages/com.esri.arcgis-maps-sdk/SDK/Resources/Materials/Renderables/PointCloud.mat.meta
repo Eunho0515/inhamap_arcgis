@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b763b16c70afb4c3f94c30d79d6fc792
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Materials/Renderables/PointCloud.mat
+  uploadId: 968484

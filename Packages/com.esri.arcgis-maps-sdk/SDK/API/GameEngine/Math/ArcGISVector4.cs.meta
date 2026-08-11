@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5261982fa0ae041268d25a078db73421
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Math/ArcGISVector4.cs
+  uploadId: 968484

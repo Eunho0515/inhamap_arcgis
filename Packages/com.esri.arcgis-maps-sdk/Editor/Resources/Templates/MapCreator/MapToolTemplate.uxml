@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/MapToolStyle.uss" />
+	<ScrollView>
+		<VisualElement class="tool-holder">
+			<Foldout name="map-type-foldout" class="main-foldout" text="Map Type">
+				<esri:ArcGISMapTypeField binding-path="mapType" />
+			</Foldout>
+			<Foldout class="main-foldout" text="Spatial Reference">
+				<Toggle name="toggle-enable-manual-selection" label="Enable Manual Selection" binding-path="useCustomMapSpatialReference"/>
+				<VisualElement name="map-coordinate-system-buttons">
+					<VisualElement>
+						<Label text="Horizontal Coordinate System"/>
+						<esri:ArcGISWKIDField name="map-cs-horizontal" label="Horizontal Coordinate System" binding-path="customMapSpatialReference.WKID"/>
+					</VisualElement>
+					<VisualElement>
+						<Label text="Vertical Coordinate System"/>
+						<esri:ArcGISWKIDField name="map-cs-vertical" label="Vertical Coordinate System" binding-path="customMapSpatialReference.VerticalWKID"/>
+					</VisualElement>
+				</VisualElement>
+			</Foldout>
+			<Foldout class="main-foldout" name="foldout-origin-location" text="Origin Position">
+				<VisualElement class="unity-inspector-element">
+					<editor:PropertyField label="" binding-path="originPosition"/>
+				</VisualElement>
+			</Foldout>
+			<Foldout class="main-foldout" name="category-map-extent" text="Map Extent">
+				<VisualElement class="unity-inspector-element">
+					<editor:PropertyField name="toggle-enable-map-extent" label="Enable Map Extent" binding-path="enableExtent" />
+					<VisualElement name="map-extent-fields">
+						<editor:PropertyField name="toggle-origin-center-extent" label="Use Origin Position as Center" binding-path="extent.UseOriginAsCenter" />
+						<editor:PropertyField name="geographic-center-fields" label="Geographic Center" binding-path="extent.GeographicCenter"/>
+						<Foldout class="empty-foldout" text="Shape Extent">
+							<editor:PropertyField label="Shape" name="map-shape-selector" type="Esri.ArcGISMapsSDK.Components.MapExtentShapes, ArcGISMapsSDK" binding-path="extent.ExtentShape" />
+							<editor:PropertyField label="Shape Dimensions" name="map-shape-dimensions-field" binding-path="extent.ShapeDimensions" />
+						</Foldout>
+					</VisualElement>
+				</VisualElement>
+			</Foldout>
+		</VisualElement>
+		<VisualElement class="create-button-holder">
+			<Button class="button-create" name="button-create-map" text="Create Map"></Button>
+			<Button class="button-refresh" name="button-refresh-map" tooltip="Reload Map">
+				<Image />
+			</Button>
+		</VisualElement>
+	</ScrollView>
+</UXML>

@@ -1,0 +1,11 @@
+:root {
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+Button {
+	margin-bottom: -5px;
+	margin-top: 2px;
+	padding-bottom: 0;
+	padding-top: 0;
+}

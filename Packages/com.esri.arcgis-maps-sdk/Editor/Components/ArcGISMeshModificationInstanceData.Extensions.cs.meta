@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 51d5d9e5a989547ed9630e5c9b6141ff
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/Components/ArcGISMeshModificationInstanceData.Extensions.cs
+  uploadId: 968484

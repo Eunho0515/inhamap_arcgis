@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b841c5bf5b8894978ab42018b631756c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISSpheroidData.cs
+  uploadId: 968484

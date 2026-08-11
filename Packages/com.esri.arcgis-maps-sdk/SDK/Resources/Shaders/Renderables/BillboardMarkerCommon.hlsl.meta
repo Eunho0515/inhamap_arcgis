@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9e38c4bcfa8b4f48a0f8d4e2c8120d6a
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: ""
+  assetBundleName: ""
+  assetBundleVariant: ""
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Renderables/BillboardMarkerCommon.hlsl
+  uploadId: 968484

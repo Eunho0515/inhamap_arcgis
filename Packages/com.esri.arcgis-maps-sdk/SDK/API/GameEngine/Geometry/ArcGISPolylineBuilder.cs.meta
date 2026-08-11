@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4f2ec343504474331902a695514f5fa7
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISPolylineBuilder.cs
+  uploadId: 968484

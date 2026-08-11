@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ad8943343e7039a4580279e0028597c6
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/HPF/Editor/Esri.HPFramework.Editor.asmdef
+  uploadId: 968484

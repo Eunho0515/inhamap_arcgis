@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 99bb31d0bbaee456b8057dca1f61d1cf
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudColorClassBreak.cs
+  uploadId: 968484

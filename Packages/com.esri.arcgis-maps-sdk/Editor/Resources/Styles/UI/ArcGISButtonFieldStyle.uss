@@ -1,0 +1,10 @@
+.arcgis-button-field > .unity-base-field__input {
+	flex-grow: 1;
+}
+
+.arcgis-button-field__button {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 16px;
+	padding-right: 16px;
+}

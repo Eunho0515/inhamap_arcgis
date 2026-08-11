@@ -1,0 +1,115 @@
+#pragma kernel CSMain
+
+Texture2D<float> Input;
+RWTexture2D<float4> Output;
+
+SamplerState input_linear_clamp_sampler;
+
+float MinLatitude;
+float LatitudeAngleDelta;
+float LongitudeArc;
+float LatitudeLength;
+float CircleLongitude;
+float EarthRadius;
+float4 InputOffsetAndScale;
+
+float GetLongitudeLength(float step)
+{
+	return CircleLongitude * sin(90.0 - abs(MinLatitude + step * LatitudeAngleDelta))* LongitudeArc;
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	uint width, height;
+	Output.GetDimensions(width, height);
+
+	if (id.x < width && id.y < height)
+	{
+		uint inputWidth, inputHeight;
+		Input.GetDimensions(inputWidth, inputHeight);
+		int2 sizeMinusOne = uint2(inputWidth - 1, inputHeight - 1);
+
+		// Get 4 adjacent texel locations (x,y) from the current texel location
+		int2 sampleCoord0 = (int2)id.xy;
+		int2 sampleCoord1 = max(sampleCoord0 + int2(0, -1), 0);
+		int2 sampleCoord2 = min(sampleCoord0 + int2(0, 1), sizeMinusOne);
+		int2 sampleCoord3 = max(sampleCoord0 + int2(-1, 0), 0);
+		int2 sampleCoord4 = min(sampleCoord0 + int2(1, 0), sizeMinusOne);
+
+		// Calculate the inverse of the width and height of the output texture
+		float2 invInputSize = float2(1.f / (float)width, 1.f / (float)height);
+
+		// Calculate sampling locations based on the input texture size.
+		// Half texel offset to sample the centre of a texel
+		float2 sampleUV0 = (sampleCoord0 + 0.5f) * invInputSize;
+		float2 sampleUV1 = (sampleCoord1 + 0.5f) * invInputSize;
+		float2 sampleUV2 = (sampleCoord2 + 0.5f) * invInputSize;
+		float2 sampleUV3 = (sampleCoord3 + 0.5f) * invInputSize;
+		float2 sampleUV4 = (sampleCoord4 + 0.5f) * invInputSize;
+
+		// Sample the input texture (elevation), taking into consideration the subregion of the texture
+		float sample0 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV0 * InputOffsetAndScale.zw, 0);
+		float sample1 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV1 * InputOffsetAndScale.zw, 0);
+		float sample2 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV2 * InputOffsetAndScale.zw, 0);
+		float sample3 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV3 * InputOffsetAndScale.zw, 0);
+		float sample4 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV4 * InputOffsetAndScale.zw, 0);
+
+		// Calculate the distance between elevation points at centers of texels
+		float latitudePixelSize = LatitudeLength * invInputSize.y;
+		float longitudePixelSize = GetLongitudeLength((float)id.x) * invInputSize.x;
+
+		// Create vectors from the central pixel towards the neighbouring pixels
+		float3 v0 = float3(0.0f, latitudePixelSize * (abs(sampleCoord2.y - sampleCoord0.y)), (sample2 - sample0));
+		float3 v1 = float3(0.0f, -latitudePixelSize * (abs(sampleCoord1.y - sampleCoord0.y)), (sample1 - sample0));
+		float3 v2 = float3(longitudePixelSize * (abs(sampleCoord4.x - sampleCoord0.x)), 0.0f, (sample4 - sample0));
+		float3 v3 = float3(-longitudePixelSize * (abs(sampleCoord3.x - sampleCoord0.x)), 0.0f, (sample3 - sample0));
+
+		// Calculate the final normal vector, normalize it and handle edge cases (literally, texture edges)
+		float3 normal = 0;
+
+		[flatten]
+		if (id.x != 0 && id.y != 0 && (int)id.x != sizeMinusOne.x && (int)id.y != sizeMinusOne.y)
+		{
+			normal = normalize(cross(v0, v3) + cross(v1, v2));
+		}
+		else
+		{
+			if (id.x == 0 && id.y == 0)
+			{
+				normal = normalize(cross(v2, v0));
+			}
+			else if (id.x == 0 && (int)id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v1, v2));
+			}
+			else if ((int)id.x == sizeMinusOne.x && id.y == 0)
+			{
+				normal = normalize(cross(v0, v3));
+			}
+			else if ((int)id.x == sizeMinusOne.x && (int)id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v3, v1));
+			}
+			else if (id.x == 0)
+			{
+				normal = normalize(cross(v2, v0));
+			}
+			else if (id.y == 0)
+			{
+				normal = normalize(cross(v0, v3));
+			}
+			else if ((int)id.x == sizeMinusOne.x)
+			{
+				normal = normalize(cross(v3, v1));
+			}
+			else if ((int)id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v1, v2));
+			}
+		}
+
+		// Remap to 0.0->1.0 range to fit RGBA8U texture
+		Output[id.xy] = float4(0.5f * normal + 0.5f, 0);
+	}	
+}

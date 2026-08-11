@@ -1,0 +1,203 @@
+:root {
+	flex-direction: column;
+}
+
+#toolbar {
+	align-self: center;
+	flex-shrink: 0;
+	padding: 10px;
+}
+
+#body {
+	flex-grow: 1;
+}
+
+#filters-foldout ListView .unity-list-view__item {
+	border-radius: 3px;
+	height: 20px;
+}
+
+.dark #filters-foldout ListView .unity-list-view__item {
+	background-color: #303030;
+}
+
+.light #filters-foldout ListView .unity-list-view__item {
+	background-color: #e4e4e4;
+}
+
+#new-filter-tab,
+#filter-attributes-tab,
+#filter-definition-tab,
+#where-clause-tab {
+	flex-grow: 1;
+}
+
+#new-filter-tab #add-filter-button {
+	align-items: center;
+	flex-direction: row;
+	opacity: 0.7;
+}
+
+#new-filter-tab #add-filter-button:hover {
+	opacity: 1;
+}
+
+#new-filter-tab #add-filter-button Image {
+	height: 10px;
+	margin-left: 5px;
+	margin-right: 8px;
+	opacity: 0.7;
+	width: 10px;
+}
+
+.dark #new-filter-tab #add-filter-button Image {
+	--unity-image: resource('Images/MapCreator/Dark/PlusIcon');
+}
+
+.light #new-filter-tab #add-filter-button Image {
+	--unity-image: resource('Images/MapCreator/Light/PlusIcon');
+}
+
+#new-filter-tab #add-filter-button TextElement {
+	height: 15px;
+}
+
+#filters-foldout,
+#selected-filter-foldout {
+	flex-shrink: 0;
+}
+
+#filter-attributes-foldout,
+#filter-definition-foldout,
+#filters-foldout,
+#selected-filter-foldout {
+	margin-right: 15px;
+}
+
+#filter-definition-foldout #unity-content {
+	flex-direction: row;
+}
+
+#selected-filter-attributes-element,
+#select-filter-definition-values {
+	flex-grow: 1;
+	width: 50%;
+}
+
+#selected-filter-attributes-element,
+#select-filter-attributes-values,
+#select-filter-definition-values-element {
+	border-width: 1px;
+	margin: 1px;
+}
+
+.dark #selected-filter-attributes-element,
+.dark #select-filter-attributes-values,
+.dark #select-filter-definition-values-element,
+.dark #warning-box {
+	border-color: #1e1e1e;
+}
+
+.light #selected-filter-attributes-element,
+.light #select-filter-attributes-values,
+.light #select-filter-definition-values-element,
+.light #warning-box {
+	border-color: #a9a9a9;
+}
+
+#select-filter-definition-values-element {
+	height: 9999px;
+}
+
+#selected-filter-attributes-element Toggle {
+	margin-left: 0px;
+}
+
+#select-filter-definition-values-foldout Toggle {
+	margin-left: 0px;
+}
+
+#select-filter-definition-values-listview {
+	flex-direction: row;
+	flex-grow: 1;
+	margin-left: 10px;
+}
+
+#selected-filter-attributes-listview {
+	flex-grow: 1;
+	margin-left: 10px;
+}
+
+#selected-filter-attributes-label {
+	-unity-font-style: bold;
+	margin: 5px;
+}
+
+#select-all-values-toggle {
+	align-self: center;
+	flex-direction: row-reverse;
+	-unity-font-style: bold;
+	width: 195px;
+}
+
+#footer {
+	flex-direction: row;
+	flex-shrink: 0;
+	justify-content: flex-end;
+	margin: 10px 13px;
+}
+
+#footer Button {
+	margin: 0px 2px;
+	width: 80px;
+}
+
+.unity-text-field__input--placeholder TextInput {
+	-unity-font-style: italic;
+}
+
+#warning-box {
+	border-radius: 3px;
+	border-width: 1px;
+	flex-direction: row;
+	margin: 3px;
+	min-height: 40px;
+	padding: 5px;
+}
+
+#warning-box Image {
+	height: 30px;
+	min-height: 30px;
+	min-width: 30px;
+	width: 30px;
+}
+
+.light #warning-box Image {
+	--unity-image: resource('Images/MapCreator/Light/InfoIcon');
+}
+
+.dark #warning-box Image {
+	--unity-image: resource('Images/MapCreator/Dark/InfoIcon');
+}
+
+#warning-box Label {
+	flex-shrink: 1;
+	flex-wrap: nowrap;
+	white-space: normal;
+}
+
+#filters-dropdown {
+	max-width: 50%;
+}
+
+#where-clause-foldout {
+	height: 9999px;
+	margin-right: 14px;
+}
+
+#where-clause-textfield {
+	flex-shrink: 1;
+	height: 9999px;
+	-unity-text-align: upper-left;
+	white-space: normal;
+}

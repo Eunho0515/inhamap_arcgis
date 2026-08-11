@@ -1,0 +1,19 @@
+{
+    "name": "Esri.HPFramework.Editor",
+    "rootNamespace": "Esri.HPFramework.Editor",
+    "references": [
+        "Esri.HPFramework",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 8affb9a76de0942d3b8ed2cddf8a1139
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISMutablePointCollection.cs
+  uploadId: 968484

@@ -1,0 +1,38 @@
+#map-type-foldout.main-foldout > #unity-content {
+	align-items: center;
+}
+
+#map-coordinate-system-buttons {
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+#map-coordinate-system-buttons > VisualElement {
+	flex-grow: 1;
+}
+
+#button-create-map {
+	height: 24px;
+	margin: 8px 0px;
+	width: 230px;
+}
+
+#toggle-override-coordinate-system {
+	margin-left: 18px;
+}
+
+ArcGISWKIDField {
+	flex: 1;
+}
+
+ArcGISWKIDField TextField {
+	height: 24px;
+	margin-top: 2px;
+}
+
+ArcGISWKIDField .unity-base-text-field__input--single-line {
+	-unity-text-align: middle-center;
+}

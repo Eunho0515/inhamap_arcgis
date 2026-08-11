@@ -1,0 +1,12 @@
+:root {
+	align-items: center;
+	flex-direction: row;
+}
+
+Toggle {
+	margin: 1px 3px;
+}
+
+Label {
+	flex-grow: 1;
+}

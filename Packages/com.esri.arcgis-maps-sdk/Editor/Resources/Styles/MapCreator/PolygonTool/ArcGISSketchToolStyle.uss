@@ -1,0 +1,103 @@
+:root {
+	flex-direction: row;
+	justify-content: center;
+}
+
+.sketch-tool-background {
+	background-color: #2a2a2a;
+	border-color: #303030;
+	border-radius: 10px;
+	border-width: 1px;
+	height: 100%;
+	opacity: 0.7;
+	position: absolute;
+	width: 100%;
+}
+
+.sketch-tool {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-left: 13px;
+}
+
+.sketch-tool Button {
+	align-items: center;
+	background-color: #585858;
+	border-color: #303030;
+	border-radius: 14px;
+	height: 28px;
+	justify-content: center;
+	margin: 8px 5px;
+	padding: 0;
+	width: 28px;
+}
+
+.sketch-tool Button:disabled {
+	opacity: 0.35;
+}
+
+.sketch-tool Button:enabled {
+	opacity: 0.7;
+}
+
+.sketch-tool Button:enabled:hover {
+	background-color: #676767;
+}
+
+.sketch-tool Button:enabled:hover:active {
+	background-color: #46607c;
+}
+
+.sketch-tool Button.selected:enabled {
+	background-color: #46607c;
+	opacity: 1;
+}
+
+.sketch-tool Button.selected:enabled:hover {
+	background-color: #4f657f;
+}
+
+.sketch-tool Button.selected:enabled:hover:active {
+	background-color: #46607c;
+}
+
+.sketch-tool Button#draw Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Draw_Polygons_16x16');
+}
+
+.sketch-tool Button#edit Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Edit_Polygons_16x16');
+}
+
+.sketch-tool Button#copy Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Copy_16x16');
+}
+
+.sketch-tool Button#paste Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Paste_16x16');
+}
+
+.sketch-tool Button#delete Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Remove_16x16');
+}
+
+.sketch-tool Button#close {
+	align-self: flex-start;
+	border-radius: 8px;
+	height: 16px;
+	margin: 4px 4px;
+	width: 16px;
+}
+
+.sketch-tool Button#close Image {
+	--unity-image: resource('Images/MapCreator/OverlayToolbar/Close_6x6');
+}
+
+.sketch-tool .separator {
+	background-color: #c4c4c4;
+	height: 16px;
+	margin: auto 5px;
+	width: 1px;
+}

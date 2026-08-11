@@ -1,0 +1,82 @@
+:root {
+	padding: 10px;
+}
+
+.add-portal-window {
+	flex-grow: 1;
+}
+
+#info-center {
+	flex-grow: 1;
+	height: 45px;
+	justify-content: center;
+}
+
+#info-holder {
+	border-radius: 4px;
+	border-width: 1px;
+	flex-direction: row;
+	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 10px;
+	padding: 6px;
+}
+
+.dark #info-holder {
+	border-color: #1e1e1e;
+}
+
+.light #info-holder {
+	border-color: #a9a9a9;
+}
+
+.dark #info-icon {
+	background-image: resource('Images/MapCreator/Dark/InfoIcon');
+}
+
+.light #info-icon {
+	background-image: resource('Images/MapCreator/Light/InfoIcon');
+}
+
+#warning-icon {
+	display: none;
+}
+
+.dark #warning-icon {
+	background-image: resource('Images/MapCreator/Dark/WarningIcon');
+}
+
+.light #warning-icon {
+	background-image: resource('Images/MapCreator/Light/WarningIcon');
+}
+
+.icons {
+	align-self: center;
+	height: 30px;
+	width: 30px;
+}
+
+#info-label {
+	margin: 6px;
+	-unity-text-align: middle-left;
+}
+
+.hidden-fields {
+	display: flex;
+	visibility: hidden;
+}
+
+.buttons {
+	align-self: flex-end;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.buttons Button {
+	width: 80px;
+}
+
+#add-button {
+	display: none;
+}

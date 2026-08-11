@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+	xmlns:ui="UnityEngine.UIElements"
+	xmlns:uie="UnityEditor.UIElements"
+	esri="Esri.ArcGISMapsSDK.Editor.UI"
+	editor-extension-mode="False"
+>
+	<Style src="../../Styles/BSLFilters/BSLCategoriesWindowStyle.uss" />
+	<ui:ScrollView name="main-scrollview">
+		<ui:VisualElement name="architectural-element">
+			<ui:Foldout name="architectural-foldout" usage-hints="None">
+				<ui:ListView focusable="true" name="architectural-listview" selection-type="None" virtualization-method="DynamicHeight" />
+			</ui:Foldout>
+			<ui:Toggle name="architectural-toggle" />
+			<ui:Label name="architectural-label" text="Architectural" display-tooltip-when-elided="true" />
+		</ui:VisualElement>
+		<ui:VisualElement name="structural-element">
+			<ui:Foldout name="structural-foldout">
+				<ui:ListView focusable="true" name="structural-listview" selection-type="None" virtualization-method="DynamicHeight" />
+			</ui:Foldout>
+			<ui:Toggle name="structural-toggle" />
+			<ui:Label name="structural-label" text="Structural" display-tooltip-when-elided="true" />
+		</ui:VisualElement>
+		<ui:VisualElement name="mechanical-element">
+			<ui:Foldout name="mechanical-foldout">
+				<ui:ListView focusable="true" name="mechanical-listview" selection-type="None" virtualization-method="DynamicHeight" />
+			</ui:Foldout>
+			<ui:Toggle name="mechanical-toggle" />
+			<ui:Label name="mechanical-label" text="Mechanical" display-tooltip-when-elided="true" />
+		</ui:VisualElement>
+		<ui:VisualElement name="electrical-element">
+			<ui:Foldout name="electrical-foldout">
+				<ui:ListView focusable="true" name="electrical-listview" selection-type="None" virtualization-method="DynamicHeight" />
+			</ui:Foldout>
+			<ui:Toggle name="electrical-toggle" />
+			<ui:Label name="electrical-label" text="Electrical" display-tooltip-when-elided="true" />
+		</ui:VisualElement>
+		<ui:VisualElement name="piping-element">
+			<ui:Foldout name="piping-foldout">
+				<ui:ListView focusable="true" name="piping-listview" selection-type="None" virtualization-method="DynamicHeight" />
+			</ui:Foldout>
+			<ui:Toggle name="piping-toggle" />
+			<ui:Label name="piping-label" text="Piping" display-tooltip-when-elided="true" />
+		</ui:VisualElement>
+	</ui:ScrollView>
+	<ui:VisualElement name="footer">
+		<ui:Button name="select-all-button" text="Select All" />
+		<ui:Button name="clear-button" text="Clear All" />
+	</ui:VisualElement>
+</ui:UXML>

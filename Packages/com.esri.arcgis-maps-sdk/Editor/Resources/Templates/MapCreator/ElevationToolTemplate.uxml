@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/ElevationToolStyle.uss" />
+	<VisualElement class="elevation-tool">
+		<VisualElement name="elevation-properties-tool" class="elevation-properties-container">
+			<VisualElement class="title">
+				<TextElement name="elevation-properties-tool-title" text="Properties"/>
+			</VisualElement>
+			<VisualElement class="mesh-modifications">
+				<Toggle name="enable-mesh-modifications" text="Mesh Modification"/>
+				<VisualElement class="spacer"/>
+				<VisualElement name="open-mesh-modifications-tool">
+					<Image />
+				</VisualElement>
+			</VisualElement>
+			<VisualElement name="exaggeration-factor-container" class="exaggeration-factor-container">
+				<TextElement name="exaggeration-label" class="exaggeration-factor-label" label="Exaggeration Factor" text="Elevation Exaggeration"/>
+				<Slider name="exaggeration-factor-slider" low-value="0" high-value="100" value="1" binding-path="mapElevation.ExaggerationFactor"/>
+				<FloatField name="exaggeration-factor-float-field" binding-path="mapElevation.ExaggerationFactor"/>
+			</VisualElement>
+		</VisualElement>
+		<esri:ArcGISMapCreatorElevationWidget />
+		<VisualElement class="footer">
+			<Toggle name="enable-all" text="Enable All"/>
+			<VisualElement class="spacer"/>
+			<VisualElement class="add-new">
+				<Image class="plus" />
+				<TextElement name="add-new-label" text="Add New" />
+				<editor:ToolbarMenu name="add-new-toolbar-menu"/>
+			</VisualElement>
+		</VisualElement>
+	</VisualElement>
+</UXML>

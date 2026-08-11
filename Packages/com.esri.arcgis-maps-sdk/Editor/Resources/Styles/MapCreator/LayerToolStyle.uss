@@ -1,0 +1,60 @@
+:root {
+	flex-grow: 1;
+	padding: 0;
+}
+
+ScrollView {
+	flex-grow: 1;
+}
+
+ScrollView #unity-content-container {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footer {
+	align-content: center;
+	flex-direction: row;
+	flex-shrink: 0;
+	height: 56px;
+	justify-content: flex-end;
+	padding-left: 20px;
+	padding-right: 32px;
+}
+
+.footer Toggle Label {
+	margin-left: 10px;
+}
+
+.footer .spacer {
+	flex-grow: 1;
+}
+
+.footer .add-new {
+	align-items: center;
+	flex-direction: row;
+	opacity: 0.7;
+}
+
+.footer .add-new:hover {
+	opacity: 1;
+}
+
+.footer .add-new .plus {
+	height: 10px;
+	margin-right: 8px;
+	opacity: 0.7;
+	width: 10px;
+}
+
+.dark .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Dark/PlusIcon');
+}
+
+.light .footer .add-new .plus {
+	background-image: resource('Images/MapCreator/Light/PlusIcon');
+}
+
+.footer .add-new TextElement {
+	height: 15px;
+}

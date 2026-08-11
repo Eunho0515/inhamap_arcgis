@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../Styles/MapCreator/AuthToolStyle.uss" />
+	<ScrollView>
+		<VisualElement class="tool-holder">
+			<VisualElement>
+				<Foldout text="API Key" name="Foldout" class="main-foldout add-data-foldout">
+					<VisualElement class="unity-inspector-element">
+						<VisualElement>
+							<TextField name="api-key-text" label="API Key" class="unity-base-field__aligned unity-base-field__inspector-field" />
+						</VisualElement>
+					</VisualElement>
+				</Foldout>
+				<Button name="api-info-button" display-tooltip-when-elided="true" tooltip="Click to get an API key." />
+			</VisualElement>
+			<Foldout text="Authentication Configuration" class="main-foldout">
+				<VisualElement class="unity-inspector-element">
+					<VisualElement name="config-holder" />
+				</VisualElement>
+			</Foldout>
+		</VisualElement>
+	</ScrollView>
+	<VisualElement class="footer">
+		<VisualElement class="spacer" />
+		<VisualElement class="add-new">
+			<Image class="plus" />
+			<TextElement name="add-new-label" text="Add New" />
+		</VisualElement>
+	</VisualElement>
+</UXML>

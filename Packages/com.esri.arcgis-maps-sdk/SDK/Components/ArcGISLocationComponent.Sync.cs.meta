@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4e627b08c2aa14e3387c900066ec3644
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Components/ArcGISLocationComponent.Sync.cs
+  uploadId: 968484

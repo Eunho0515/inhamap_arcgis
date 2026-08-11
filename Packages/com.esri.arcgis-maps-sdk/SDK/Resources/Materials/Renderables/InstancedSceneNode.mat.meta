@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cbac73015a7111a49849bc483cd2412c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Materials/Renderables/InstancedSceneNode.mat
+  uploadId: 968484

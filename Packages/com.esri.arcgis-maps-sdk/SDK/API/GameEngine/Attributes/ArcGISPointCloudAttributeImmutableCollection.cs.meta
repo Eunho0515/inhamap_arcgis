@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a10362b8e3e81410c9cf0d853057a0aa
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Attributes/ArcGISPointCloudAttributeImmutableCollection.cs
+  uploadId: 968484

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+<Style src="../../Styles/MapCreator/AddOAuthUserStyle.uss" />
+	<VisualElement class="add-portal-window">
+		<TextField picking-mode="Ignore" label="Portal URL" name="portal-field" is-delayed="true" binding-path="portalItem.portalURL" />
+		<VisualElement name="info-center">
+			<VisualElement name="info-holder">
+				<VisualElement class="icons" name="info-icon" />
+				<VisualElement class="icons" name="warning-icon" />
+				<Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-label"  />
+			</VisualElement>
+		</VisualElement>
+		<VisualElement class="hidden-fields">
+			<TextField picking-mode="Ignore" label="Name" name="name-field" binding-path="portalItem.name" />
+			<TextField picking-mode="Ignore" label="Client ID" name="client-field" binding-path="portalItem.clientId" />
+			<TextField picking-mode="Ignore" label="Redirect URL" name="redirect-field" binding-path="portalItem.redirectURL" />
+		</VisualElement>
+		<VisualElement class="buttons">
+			<Button name="add-button" text="Add" />
+			<Button name="next-button" text="Next" />
+		</VisualElement>
+	</VisualElement>
+</UXML>

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: cfb5a75f4e3c54aef9b7a786998a9298
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/VectorTile/ArcGISVectorTileStyle.cs
+  uploadId: 968484

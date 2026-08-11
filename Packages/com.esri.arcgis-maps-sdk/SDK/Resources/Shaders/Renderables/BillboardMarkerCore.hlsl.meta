@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b96a72bacbfd4ac1a52fc1b5079326b
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: ""
+  assetBundleName: ""
+  assetBundleVariant: ""
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Shaders/Renderables/BillboardMarkerCore.hlsl
+  uploadId: 968484

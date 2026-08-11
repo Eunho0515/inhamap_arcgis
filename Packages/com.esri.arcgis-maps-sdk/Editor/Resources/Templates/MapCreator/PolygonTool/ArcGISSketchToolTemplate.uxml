@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:esri="Esri.ArcGISMapsSDK.Editor.UI"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<Style src="../../../Styles/MapCreator/PolygonTool/ArcGISSketchToolStyle.uss" />
+	<VisualElement class="sketch-tool-background" />
+	<VisualElement class="sketch-tool">
+		<Button name="draw">
+			<Image />
+		</Button>
+		<Button name="edit">
+			<Image />
+		</Button>
+		<VisualElement class="separator" />
+		<Button name="copy">
+			<Image />
+		</Button>
+		<Button name="paste">
+			<Image />
+		</Button>
+		<Button name="delete">
+			<Image />
+		</Button>
+		<Button name="close">
+			<Image />
+		</Button>
+	</VisualElement>
+</UXML>

@@ -1,0 +1,22 @@
+.arcgis-spatial-reference-field > .unity-base-field__input {
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.arcgis-spatial-reference-field IntegerField {
+	flex-basis: 1px;
+	flex-grow: 1;
+	margin: 0;
+}
+
+.arcgis-spatial-reference-field IntegerField#wkid {
+	margin-right: 3px;
+}
+
+.arcgis-spatial-reference-field IntegerField#verticalWKID {
+	margin-left: 3px;
+}
+
+.arcgis-spatial-reference-field IntegerField > .unity-base-field__label {
+	min-width: auto;
+}

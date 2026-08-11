@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 40a182d785604c21be304ed018701e6f
+timeCreated: 1643720629
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/HPF/Runtime/Math/HPMath.cs
+  uploadId: 968484

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 80bef037428a58c40bd8ca2f49704e5d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/MapCreator/Scripts/ArcGISAddOAuthUserWindow.cs
+  uploadId: 968484

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e6e7faa173306486f9f9a53b8ac8ac22
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudReturnTypeCollection.cs
+  uploadId: 968484

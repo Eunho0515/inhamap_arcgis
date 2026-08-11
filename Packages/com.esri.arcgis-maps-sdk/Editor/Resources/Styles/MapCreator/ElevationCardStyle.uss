@@ -1,0 +1,115 @@
+.card {
+	align-items: center;
+	border-radius: 0px 3px 3px 0px;
+	border-width: 1px;
+	flex-direction: row;
+	margin: 0px 0px 4px 20px;
+}
+
+.dark .card {
+	background-color: #515151;
+}
+
+.dark .card:hover {
+	background-color: #676767;
+}
+
+.dark .card.disabled {
+	opacity: 0.5;
+}
+
+.light .card {
+	background-color: #e4e4e4;
+	border-color: #e4e4e4;
+	color: #383838;
+}
+
+.light .card:hover {
+	background-color: #b2b2b2;
+	border-color: #b2b2b2;
+}
+
+.light .card.disabled {
+	background-color: #e9e9e9;
+	color: #464646;
+	opacity: 0.6;
+}
+
+.light .card.disabled:hover {
+	background-color: #b2b2b2;
+}
+
+.card.invisible {
+	display: none;
+}
+
+.card Image {
+	-unity-background-scale-mode: scale-and-crop;
+	height: 44px;
+	width: 66px;
+}
+
+.card .center {
+	flex-direction: row;
+	flex-grow: 1;
+	margin-left: 10px;
+}
+
+.card .center.rename Label {
+	display: none;
+}
+
+.card .center.rename TextField {
+	width: 100%;
+}
+
+.card .center Label {
+	font-size: 13px;
+}
+
+.card .center TextField {
+	margin: 0;
+	width: 0;
+}
+
+.card .right {
+	flex-direction: column;
+	height: 100%;
+}
+
+.card .right ToolbarMenu {
+	background-color: transparent;
+	border-width: 0;
+	margin: 3px;
+	opacity: 0.77;
+	padding: 0;
+}
+
+.card:hover .right ToolbarMenu:hover {
+	opacity: 1;
+}
+
+.card .right ToolbarMenu .unity-toolbar-menu__text {
+	flex-grow: 0;
+}
+
+.card .right ToolbarMenu .unity-toolbar-menu__arrow {
+	height: 16px;
+	width: 16px;
+}
+
+.dark .card .right ToolbarMenu .unity-toolbar-menu__arrow {
+	background-image: resource('Images/MapCreator/Dark/MoreIcon');
+}
+
+.light .card .right ToolbarMenu .unity-toolbar-menu__arrow {
+	background-image: resource('Images/MapCreator/Light/MoreIcon');
+}
+
+.card .right .spacer {
+	flex-grow: 1;
+}
+
+.card .right Toggle {
+	margin: 4px;
+}

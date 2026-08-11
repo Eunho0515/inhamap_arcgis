@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3e77a260f51d14dad8a385e4f9e805e9
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Extent/ArcGISExtentCircle.cs
+  uploadId: 968484

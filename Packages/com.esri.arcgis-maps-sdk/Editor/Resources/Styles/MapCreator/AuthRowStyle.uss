@@ -1,0 +1,40 @@
+Foldout#auth-config-foldout {
+	margin-bottom: -5px;
+}
+
+Foldout#auth-config-foldout > .unity-foldout__toggle .unity-toggle__input {
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	margin-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+.dark Foldout#auth-config-foldout > .unity-foldout__toggle .unity-toggle__input {
+	background-color: #303030;
+	border-bottom-color: #2d2d2d;
+	border-top-color: black;
+}
+
+.light Foldout#auth-config-foldout > .unity-foldout__toggle .unity-toggle__input {
+	background-color: #e4e4e4;
+	color: #383838;
+}
+
+Foldout#auth-config-foldout .unity-foldout__content {
+	margin-bottom: 8px;
+	margin-right: 20px;
+}
+
+Foldout#auth-config-foldout TextField {
+	margin-top: 1px;
+}
+
+Image#warning-icon {
+	--unity-image: resource('console.warnicon.sml');
+	height: 16px;
+	left: 70px;
+	position: absolute;
+	top: 2px;
+	width: 16px;
+}

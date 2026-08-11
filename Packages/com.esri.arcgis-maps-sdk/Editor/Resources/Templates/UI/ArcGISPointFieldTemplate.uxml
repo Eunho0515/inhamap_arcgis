@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="
+						UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+						UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd"
+>
+	<editor:PropertyField label="X" name="x" is-delayed="true" binding-path="X" />
+	<editor:PropertyField label="Y" name="y" is-delayed="true" binding-path="Y" />
+	<editor:PropertyField label="Z" name="z" is-delayed="true" binding-path="Z" />
+	<editor:PropertyField label="Spatial Reference" name="spatial-reference" is-delayed="true" binding-path="SpatialReference" />
+</UXML>

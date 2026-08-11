@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6e56fe355d301bf428eb4a8b9178b994
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/MapCreator/Scripts/ArcGISMapCreatorMapTool.cs
+  uploadId: 968484

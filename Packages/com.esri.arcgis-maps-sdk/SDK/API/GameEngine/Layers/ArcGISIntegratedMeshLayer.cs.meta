@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b9204bb6beb1b4686a889e1cfb3ccb4f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/ArcGISIntegratedMeshLayer.cs
+  uploadId: 968484

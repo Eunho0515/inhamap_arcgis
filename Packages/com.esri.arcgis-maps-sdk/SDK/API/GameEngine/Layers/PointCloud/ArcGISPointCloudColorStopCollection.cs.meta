@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 44807180873da49a093f09abc45b745d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudColorStopCollection.cs
+  uploadId: 968484

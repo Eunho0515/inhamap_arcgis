@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: efd61f6bb86e6d540a14f156500fc0be
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/Editor/MapCreator/Scripts/PolygonTool/ArcGISSpatialFeatureFilterTool.cs
+  uploadId: 968484

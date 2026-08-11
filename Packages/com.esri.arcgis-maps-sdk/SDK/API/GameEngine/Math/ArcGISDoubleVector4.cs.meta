@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4a9d7d18c1d284108b9908f0532a0868
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Math/ArcGISDoubleVector4.cs
+  uploadId: 968484

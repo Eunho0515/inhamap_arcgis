@@ -1,0 +1,50 @@
+:root {
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-right: 0px;
+}
+
+.dark Button:hover {
+	background-color: #7e7e7e;
+}
+
+.dark Button:disabled {
+	background-color: #46607c;
+	border-color: black;
+	opacity: 1;
+}
+
+.light Button:disabled {
+	background-color: #96c3fb;
+	border-color: #b2b2b2;
+	opacity: 1;
+}
+
+.light Button:enabled {
+	background-color: #e4e4e4;
+	border-color: #e4e4e4;
+	opacity: 1;
+}
+
+Button {
+	flex: 1;
+	height: 24px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	max-width: 101px;
+	min-width: 100px;
+}
+
+#global-button {
+	border-bottom-right-radius: 0px;
+	border-right-width: 0px;
+	border-top-right-radius: 0px;
+}
+
+#local-button {
+	border-bottom-left-radius: 0px;
+	border-left-width: 0px;
+	border-top-left-radius: 0px;
+}

@@ -1,0 +1,6 @@
+# ArcGIS native runtime binaries that exceed GitHub's regular file-size limit
+*.so filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+Packages/com.esri.arcgis-maps-sdk/Binaries/iOS/Runtimecore.xcframework/ios-arm64_x86_64-simulator/Runtimecore.framework/Runtimecore filter=lfs diff=lfs merge=lfs -text
+Packages/com.esri.arcgis-maps-sdk/Binaries/xrOS/Runtimecore.xcframework/xros-arm64_x86_64-simulator/Runtimecore.framework/Runtimecore filter=lfs diff=lfs merge=lfs -text

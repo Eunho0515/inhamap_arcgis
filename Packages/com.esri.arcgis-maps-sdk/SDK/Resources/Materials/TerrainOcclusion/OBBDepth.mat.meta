@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0710ecbf6875e31458cefc0dab83dc03
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/Resources/Materials/TerrainOcclusion/OBBDepth.mat
+  uploadId: 968484

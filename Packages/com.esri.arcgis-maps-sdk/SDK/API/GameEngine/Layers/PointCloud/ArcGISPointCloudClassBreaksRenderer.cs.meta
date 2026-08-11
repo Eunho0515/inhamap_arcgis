@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: bcc5d9b41679a4e628f248d13e9a4706
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/PointCloud/ArcGISPointCloudClassBreaksRenderer.cs
+  uploadId: 968484

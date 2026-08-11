@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7ed39dbb2d5b444f48309f481e6abe06
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISGeodeticDistanceResult.cs
+  uploadId: 968484

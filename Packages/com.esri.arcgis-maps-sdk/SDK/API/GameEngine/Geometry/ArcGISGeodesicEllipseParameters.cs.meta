@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4fd38dc2a3d5546a3ba8a4beb0a06677
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Geometry/ArcGISGeodesicEllipseParameters.cs
+  uploadId: 968484

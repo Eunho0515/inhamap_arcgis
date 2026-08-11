@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 00e987b14200045ecb308712fd92abb3
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258537
+  packageName: ArcGIS Maps SDK for Unity
+  packageVersion: 2.3.0
+  assetPath: Packages/com.esri.arcgis-maps-sdk/SDK/API/GameEngine/Layers/ArcGISVectorTileLayer.cs
+  uploadId: 968484

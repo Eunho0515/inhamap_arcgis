@@ -1,0 +1,73 @@
+#pragma kernel CSMain
+
+Texture2D<float> Input;
+RWTexture2D<float4> Output;
+
+SamplerState input_linear_clamp_sampler;
+
+float MinLatitude;
+float LatitudeAngleDelta;
+float LongitudeArc;
+float LatitudeLength;
+float CircleLongitude;
+float EarthRadius;
+float4 InputOffsetAndScale;
+
+float GetLongitudeLength(float step)
+{
+		return CircleLongitude * sin(90.0 - abs(MinLatitude + step * LatitudeAngleDelta)) * LongitudeArc;
+
+		// Alternative formula - 2*Pi*r but with a smaller r
+		// return 2. * 3.14159 * (EarthRadius * cos(MinLatitude + step * LatitudeAngleDelta)) * LongitudeArc;
+}
+
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+		uint outWidth, outHeight;
+		Output.GetDimensions(outWidth, outHeight);
+
+		// Unity UV coordinates are (0,0) in bottom left and (1,1) in top right
+		if (id.x < (outWidth) && id.y < (outHeight))
+		{
+				uint inputWidth, inputHeight;
+				Input.GetDimensions(inputWidth, inputHeight);
+
+		// Get 2 adjacent texel locations (x+1, y+1) from the current texel location
+				int2 sampleCoord0 = (int2) id.xy;
+				int2 sampleCoord1 = sampleCoord0 + int2(1, 0);
+				int2 sampleCoord2 = sampleCoord0 + int2(0, 1);
+
+		// Calculate the inverse of the width and height of the input texture
+				float2 invInputSize = float2(1.f / (float) inputWidth, 1.f / (float) inputHeight);
+
+		// Calculate sampling locations based on the input texture size.
+		// Half texel offset to sample the centre of a texel
+				float2 sampleUV0 = (sampleCoord0 + 0.5f) * invInputSize;
+				float2 sampleUV1 = (sampleCoord1 + 0.5f) * invInputSize;
+				float2 sampleUV2 = (sampleCoord2 + 0.5f) * invInputSize;
+
+		// Sample the input texture (elevation), taking into consideration the subregion of the texture
+				float sample0 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV0 * InputOffsetAndScale.zw, 0);
+				float sample1 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV1 * InputOffsetAndScale.zw, 0);
+				float sample2 = Input.SampleLevel(input_linear_clamp_sampler, InputOffsetAndScale.xy + sampleUV2 * InputOffsetAndScale.zw, 0);
+			 
+		// Calculate the pixel size in linear unit (meters most of the time)
+				float latitudePixelSize = LatitudeLength * invInputSize.y;
+				float longitudePixelSize = GetLongitudeLength((float) id.y) * invInputSize.x;
+
+		// Create vectors from the central pixel towards the neighbouring pixels
+				// Unity uses a Y+ right handed normal map convention where:
+				// r = x = right = longitude, along the tangent
+				// g = y = forward = latitude, along the bitangent (for us, northish)
+				// b = z = up = altitude, along the base normal
+				float3 xDelta = float3(longitudePixelSize, 0.0f, (sample1 - sample0));
+				float3 yDelta = float3(0.0f, latitudePixelSize, (sample2 - sample0));
+ 
+				// Calculate the final normal vector and normalize it
+				float3 normal = normalize(cross(xDelta, yDelta));
+
+		// Remap to 0.0->1.0 range to fit RGBA8U texture
+				Output[id.xy] = float4(0.5f * normal + 0.5f, 0.0f);
+		}
+}
