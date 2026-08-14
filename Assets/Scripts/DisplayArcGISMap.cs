@@ -67,6 +67,7 @@ public sealed class DisplayArcGISMap : MonoBehaviour
 
         mapComponent.APIKey = ArcGISProjectSettingsAsset.Instance.APIKey;
         mapComponent.MapType = Esri.GameEngine.Map.ArcGISMapType.Local;
+        mapComponent.MeshCollidersEnabled = true;
         mapComponent.OriginPosition = coordinates;
         mapComponent.Extent = new ArcGISExtentInstanceData
         {

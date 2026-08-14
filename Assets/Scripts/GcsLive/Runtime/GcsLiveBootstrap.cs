@@ -13,9 +13,8 @@ namespace Peh.Gcs.Live.Runtime
     {
         private const string DroneResourcePath = "GcsLive/drone black and white Variant";
 
-        // The source model is about 3.1 units across. A 0.3 scale produces a
-        // roughly 93 cm professional quadcopter that remains visible near buildings.
-        private const float RealWorldDroneScale = 0.3f;
+        // Half of the previous display size: roughly a 46 cm quadcopter.
+        private const float RealWorldDroneScale = 0.15f;
 
         private const double InhaCampusCenterLongitude = 126.653488;
         private const double InhaCampusCenterLatitude = 37.4500221;
@@ -24,6 +23,7 @@ namespace Peh.Gcs.Live.Runtime
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Install()
         {
+            InstallLiveVideoHud();
 #if UNITY_6000_0_OR_NEWER
             var receiver = Object.FindAnyObjectByType<UdpTelemetryReceiver>();
 #else
@@ -37,11 +37,16 @@ namespace Peh.Gcs.Live.Runtime
             }
 
 #if UNITY_6000_0_OR_NEWER
-            if (Object.FindAnyObjectByType<ArcGisTelemetryPresenter>() != null)
+            var existingPresenter = Object.FindAnyObjectByType<ArcGisTelemetryPresenter>();
 #else
-            if (Object.FindFirstObjectByType<ArcGisTelemetryPresenter>() != null)
+            var existingPresenter = Object.FindFirstObjectByType<ArcGisTelemetryPresenter>();
 #endif
+            if (existingPresenter != null)
+            {
+                if (existingPresenter.GetComponent<FireGeoLocator>() == null)
+                    existingPresenter.gameObject.AddComponent<FireGeoLocator>();
                 return;
+            }
 
             var vehicle = new GameObject("Live UAV");
             var dronePrefab = Resources.Load<GameObject>(DroneResourcePath);
@@ -76,7 +81,20 @@ namespace Peh.Gcs.Live.Runtime
 
             var controller = vehicle.AddComponent<DroneThirdPersonController>();
             controller.Configure(presenter);
+            vehicle.AddComponent<FireGeoLocator>();
             vehicle.AddComponent<DroneMinimap>();
+        }
+
+        private static void InstallLiveVideoHud()
+        {
+#if UNITY_6000_0_OR_NEWER
+            if (Object.FindAnyObjectByType<LiveHazardVideoHud>() != null)
+#else
+            if (Object.FindFirstObjectByType<LiveHazardVideoHud>() != null)
+#endif
+                return;
+
+            new GameObject("Live Hazard Video HUD").AddComponent<LiveHazardVideoHud>();
         }
     }
 }

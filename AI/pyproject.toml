@@ -1,0 +1,16 @@
+[project]
+name = "gcs-hazard-yolo"
+version = "0.1.0"
+description = "Offline fire/smoke YOLO inference for the Unity GCS"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "mavsdk==3.15.3",
+    "opencv-python-headless>=4.10,<5",
+    "onnx>=1.17,<2",
+    "onnxruntime>=1.20,<2",
+    "pymavlink>=2.4.49,<3",
+    "ultralytics>=8.3,<9",
+]
+
+[tool.uv]
+package = false
