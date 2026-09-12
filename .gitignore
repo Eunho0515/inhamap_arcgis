@@ -52,6 +52,9 @@ Assets/InitTestScene*.unity*
 __pycache__/
 *.py[cod]
 AI/.config/
-AI/models/
+AI/models/*
+!AI/models/hazard/
+AI/models/hazard/*
+!AI/models/hazard/best.onnx
 AI/output/
 Assets/StreamingAssets/HazardSession/

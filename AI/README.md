@@ -13,8 +13,7 @@ From this directory:
 uv sync
 ```
 
-The fire/smoke ONNX model is stored at `models/hazard/best.onnx` and excluded
-from Git.
+The fire/smoke ONNX model used by the live receiver is stored at `models/hazard/best.onnx` and tracked in Git.
 
 ## Live telemetry
 
