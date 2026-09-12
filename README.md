@@ -2,6 +2,8 @@
 
 PX4 드론의 위치와 카메라 영상을 Unity의 ArcGIS 지도에 표시하고, YOLO로 화재·연기를 탐지하는 지상관제 프로젝트입니다. Ubuntu/Linux 컴퓨터는 MAVLink 텔레메트리와 RTP/H.264 영상을 전송합니다. Windows 컴퓨터는 데이터를 수신·처리하고 Unity에서 드론, 영상, 탐지 결과를 보여줍니다.
 
+실행 단계별 데이터 흐름은 [PROJECT_FLOW.md](PROJECT_FLOW.md)에 정리했습니다.
+
 ## 전체 흐름
 
 ```text
