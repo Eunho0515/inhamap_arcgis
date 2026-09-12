@@ -22,6 +22,8 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
+from temporal_hazard_filter import TemporalHazardFilter
+
 
 CANONICAL_CLASSES = {"fire", "smoke"}
 SHARED_MEMORY_HEADER_SIZE = 64
@@ -64,6 +66,10 @@ def parse_args() -> argparse.Namespace:
         default=Path(__file__).resolve().parent / "models" / "hazard" / "best.onnx",
     )
     parser.add_argument("--confidence", type=float, default=0.25)
+    parser.add_argument("--temporal-confirmation", action="store_true")
+    parser.add_argument("--temporal-window", type=int, default=10)
+    parser.add_argument("--temporal-min-hits", type=int, default=5)
+    parser.add_argument("--temporal-min-average-confidence", type=float, default=0.35)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--shared-memory", default="PehGcsYoloFrame")
@@ -310,6 +316,18 @@ def inference_loop(
     detections: LatestDetections,
     args: argparse.Namespace,
 ) -> None:
+    temporal_filter = (
+        TemporalHazardFilter(
+            width=args.width,
+            height=args.height,
+            window_frames=args.temporal_window,
+            minimum_hits=args.temporal_min_hits,
+            minimum_average_confidence=args.temporal_min_average_confidence,
+            class_thresholds={"fire": args.confidence, "smoke": args.confidence},
+        )
+        if args.temporal_confirmation
+        else None
+    )
     completed = 0
     started = time.monotonic()
     while True:
@@ -330,6 +348,8 @@ def inference_loop(
             boxes.append(
                 (x1, y1, x2, y2, str(model.names[class_id]), float(box.conf.item()))
             )
+        if temporal_filter is not None:
+            boxes = temporal_filter.update(boxes)
         completed += 1
         elapsed = max(time.monotonic() - started, 1e-6)
         detections.update(boxes, completed / elapsed)

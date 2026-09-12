@@ -162,6 +162,7 @@ namespace Peh.Gcs.Live.Visualization
                 mapPoint,
                 ArcGISSpatialReference.WGS84());
             PlaceFireEffect(selectedHit);
+            FollowWarningPanel(selectedHit.point);
 
             var validGps = gps.X >= -180.0 && gps.X <= 180.0 &&
                            gps.Y >= -90.0 && gps.Y <= 90.0 &&
@@ -322,12 +323,24 @@ namespace Peh.Gcs.Live.Visualization
             }
         }
 
+        private void FollowWarningPanel(Vector3 firePoint)
+        {
+            if (warningPanel == null || !warningPanel.activeSelf)
+                return;
+
+            var targetPosition = firePoint + Vector3.up * 30f;
+            warningPanel.transform.position = Vector3.Lerp(
+                warningPanel.transform.position,
+                targetPosition,
+                0.4f);
+        }
+
         private GameObject CreateWarningPanel()
         {
             var panel = GameObject.CreatePrimitive(PrimitiveType.Quad);
             panel.name = "Stable Fire Warning Panel +30m";
             panel.layer = 2; // Ignore Raycast: never let the panel affect fire geolocation.
-            panel.transform.localScale = new Vector3(12f, 4.8f, 1f);
+            panel.transform.localScale = new Vector3(24f, 10f, 1f);
             var collider = panel.GetComponent<Collider>();
             if (collider != null)
                 Destroy(collider);
@@ -344,15 +357,15 @@ namespace Peh.Gcs.Live.Visualization
             var textObject = new GameObject("Warning Text");
             textObject.layer = 2;
             textObject.transform.SetParent(panel.transform, false);
-            textObject.transform.localPosition = new Vector3(0.13f, 0f, -0.03f);
+            textObject.transform.localPosition = new Vector3(0.1f, 0f, -0.03f);
             // Cancel the parent's panel scale so the glyph proportions stay correct.
-            textObject.transform.localScale = new Vector3(1f / 12f, 1f / 4.8f, 1f);
+            textObject.transform.localScale = new Vector3(1f / 24f, 1f / 10f, 1f);
             var text = textObject.AddComponent<TextMesh>();
             text.text = "FIRE DETECTION";
             text.anchor = TextAnchor.MiddleCenter;
             text.alignment = TextAlignment.Center;
             text.fontSize = 64;
-            text.characterSize = 0.11f;
+            text.characterSize = 0.33f;
             text.color = Color.white;
             text.fontStyle = FontStyle.Bold;
             textObject.GetComponent<MeshRenderer>().sortingOrder = 2;
@@ -360,14 +373,14 @@ namespace Peh.Gcs.Live.Visualization
             var iconObject = new GameObject("Red Warning Icon");
             iconObject.layer = 2;
             iconObject.transform.SetParent(panel.transform, false);
-            iconObject.transform.localPosition = new Vector3(-0.34f, 0f, -0.035f);
-            iconObject.transform.localScale = new Vector3(1f / 12f, 1f / 4.8f, 1f);
+            iconObject.transform.localPosition = new Vector3(-0.37f, 0f, -0.035f);
+            iconObject.transform.localScale = new Vector3(1f / 24f, 1f / 10f, 1f);
             var icon = iconObject.AddComponent<TextMesh>();
             icon.text = "\u26A0";
             icon.anchor = TextAnchor.MiddleCenter;
             icon.alignment = TextAlignment.Center;
             icon.fontSize = 72;
-            icon.characterSize = 0.15f;
+            icon.characterSize = 0.45f;
             icon.color = new Color(1f, 0.08f, 0.02f, 1f);
             icon.fontStyle = FontStyle.Bold;
             iconObject.GetComponent<MeshRenderer>().sortingOrder = 3;
